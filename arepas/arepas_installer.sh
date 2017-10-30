@@ -18,6 +18,13 @@ echo "---------------------------------------------------------------"
 yum -y install git
 
 echo "---------------------------------------------------------------"
+echo "INSTALLING NGINX"
+echo "---------------------------------------------------------------"
+yum install nginx
+systemctl start nginx
+systemctl enable nginx
+
+echo "---------------------------------------------------------------"
 echo "INSTALLING GO 1.9.1"
 echo "---------------------------------------------------------------"
 wget -O go1.9.1.linux-amd64.tar.gz https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz

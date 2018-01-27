@@ -5,5 +5,5 @@
  /_/   \_\|_|   \___|| .__/  \__,_||___/   |_|   \____| \___/ 
                      |_|                                      
 ADE FLAVOR: CENTOS7
-ADE Version: OCT2017
+ADE Version: JAN2018
 BY JUAN SCARTON - https://github.com/jscarton/arepas4go

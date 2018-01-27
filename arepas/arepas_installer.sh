@@ -36,5 +36,18 @@ echo "export GOPATH=/home/vagrant/workspace">>/home/vagrant/.bash_profile
 echo "export PATH=\$PATH:\$GOPATH/bin">>/home/vagrant/.bash_profile
 
 echo "---------------------------------------------------------------"
+echo "INSTALLING MongoDB 3.4"
+echo "---------------------------------------------------------------"
+echo "[mongodb-org-3.4]">/etc/yum.repos.d/mongodb-org-3.4.repo
+echo "name=MongoDB Repository">>/etc/yum.repos.d/mongodb-org-3.4.repo
+echo "baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/">>/etc/yum.repos.d/mongodb-org-3.4.repo
+echo "gpgcheck=1">>/etc/yum.repos.d/mongodb-org-3.4.repo
+echo "enabled=1">>/etc/yum.repos.d/mongodb-org-3.4.repo
+echo "gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc">>/etc/yum.repos.d/mongodb-org-3.4.repo
+yum install -y mongodb-org
+service mongod start
+chkconfig mongod on
+
+echo "---------------------------------------------------------------"
 echo " AREPAS4G0 SETUP HAS BEEN COMPLETED"
 echo "---------------------------------------------------------------"
